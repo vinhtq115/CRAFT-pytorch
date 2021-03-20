@@ -8,13 +8,13 @@ with open('requirements.txt') as f:
 
 setuptools.setup(
     name="craft-text-detection",
-    version="0.0.1",
+    version="0.0.2",
     author="Clova AI Research, NAVER Corp., Ashish Jha",
-    author_email="youngmin.baek@navercorp.com, arj7192@gmail.com",
+    author_email="youngmin.baek@navercorp.com, arj7192@gmail.com, starcraft6723@hotmail.com",
     description="Official implementation of Character Region Awareness for Text Detection (CRAFT)",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/clovaai/CRAFT-pytorch",
+    url="https://github.com/vinhtq115/CRAFT-pytorch",
     packages=['craft'],
     classifiers=[
         "Programming Language :: Python :: 3",
