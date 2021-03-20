@@ -5,7 +5,9 @@ Official Pytorch implementation of CRAFT text detector | [Paper](https://arxiv.o
 
 Clova AI Research, NAVER Corp.
 
-**Packaged by [Ashish Jha](mailto:arj7192@gmail.com)**
+**Packaged by [Vinh Quang Tran](mailto:starcraft6723@hotmail.com)**
+
+**Based on [Ashish Jha's implementation](https://github.com/arj7192/CRAFT-pytorch). Modified for use with Windows and CUDA support.**
 
 ### Sample Results
 
@@ -16,22 +18,35 @@ PyTorch implementation for CRAFT text detector that effectively detect text area
 
 ## Updates
 **13 Jun, 2019**: Initial update
+
 **20 Jul, 2019**: Added post-processing for polygon result
+
 **28 Sep, 2019**: Added the trained model on IC15 and the link refiner
+
 **25 Jan, 2020**: Put it together as a PyPI package
 
+**20 Mar, 2021**: Modified for use with Windows and CUDA support.
+
+Changes from [Ashish Jha's implementation](https://github.com/arj7192/CRAFT-pytorch):
+* CRAFT will now run on CUDA GPU if available.
+* Changed model downloading directory to working directory for compatibility with Windows.
+* Removed required packages' version from `requirements.txt`.
 
 ## Getting started
 
 ### Use it straight from PyPI
 #### Installation
 ```
-pip install craft-text-detection
+git clone https://github.com/vinhtq115/CRAFT-pytorch
+cd CRAFT-pytorch
+pip install -r requirements.txt
+pip install -e .
 ```
 #### Usage
 ```
 import craft
 import cv2
+
 img = cv2.imread('/path/to/image/file')
 
 # run the detector
@@ -47,10 +62,10 @@ cv2.imshow('fig', heatmap)
 
 ### Use from source - install dependencies
 #### Requirements
-- PyTorch>=0.4.1
-- torchvision>=0.2.1
-- opencv-python>=3.4.2
-- check requiremetns.txt
+- PyTorch
+- torchvision
+- opencv-python
+- check requirements.txt
 ```
 pip install -r requirements.txt
 ```
